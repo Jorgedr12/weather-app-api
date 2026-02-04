@@ -1,21 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather app api</title>
+    <title>Clima API</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/functions.js" defer></script>
 </head>
 
-<body>
+<body class="bg-gray-100 flex items-center justify-center h-screen font-sans">
     <header></header>
+    
+    <main>
+        <article class="bg-white p-6 rounded-xl shadow-lg w-80">
 
-    <main></main>
+            <h1 class="text-2xl font-bold text-center text-blue-600 mb-4">Clima API</h1>
+
+            <div id="connection-status" class="status"></div>
+
+            <section class="flex gap-2">
+                <input id="city-input" type="text" placeholder="Ciudad"
+                    class="border border-gray-300 p-2 rounded w-full focus:outline-blue-500">
+                <button id="search-btn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                    Ver
+                </button>
+            </section>
+
+            <section id="weather-info" class="hidden mt-6 text-center border-t pt-4">
+                <h2 id="city-name" class="text-xl font-bold text-gray-800">--</h2>
+
+                <div class="text-5xl font-bold text-gray-800 my-2">
+                    <span id="temp-val">--</span>°C
+                </div>
+
+                <p id="weather-desc" class="text-gray-500 bg-gray-100 inline-block px-2 py-1 rounded text-sm">--</p>
+
+                <p id="data-source" class="block text-xs text-gray-400 mt-4">Esperando consulta</p>
+            </section>
+        </article>
+    </main>
 
     <footer></footer>
-
+    
+    <script src="js/app.js"></script>
 </body>
 
 </html>
