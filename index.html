@@ -8,15 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center h-screen font-sans">
+<body class="bg-gray-100 flex items-center justify-center h-screen">
     <header></header>
     
     <main>
-        <article class="bg-white p-6 rounded-xl shadow-lg w-80">
+        <article class="bg-white p-6 rounded-xl w-80 border border-black/20 ">
 
             <h1 class="text-2xl font-bold text-center text-blue-600 mb-4">Clima API</h1>
-
-            <div id="connection-status" class="status"></div>
 
             <section class="flex gap-2">
                 <input id="city-input" type="text" placeholder="Ciudad"
@@ -26,14 +24,14 @@
                 </button>
             </section>
 
-            <section id="weather-info" class="hidden mt-6 text-center border-t pt-4">
+            <section id="weather-info" class="mt-6 text-center border-t pt-4">
+
+                <p id="p-error" class="hidden"></p>
                 <h2 id="city-name" class="text-xl font-bold text-gray-800">--</h2>
 
                 <div class="text-5xl font-bold text-gray-800 my-2">
                     <span id="temp-val">--</span>°C
                 </div>
-
-                <p id="weather-desc" class="text-gray-500 bg-gray-100 inline-block px-2 py-1 rounded text-sm">--</p>
 
                 <p id="data-source" class="block text-xs text-gray-400 mt-4">Esperando consulta</p>
             </section>
