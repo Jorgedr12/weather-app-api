@@ -8,18 +8,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <header></header>
-    
-    <main>
-        <article class="bg-white p-6 rounded-xl w-80 border border-black/20 ">
+<body class="bg-[#161618] text-white flex flex-col min-h-screen">
 
-            <h1 class="text-2xl font-bold text-center text-blue-600 mb-4">Clima API</h1>
+    <header class="bg-[#1c1c1c] sticky top-0 z-50 border-b border-gray-800 text-white p-4 shadow-md">
+        <nav class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <p class="font-bold text-yellow-200">SelectWeather</p>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex flex-grow items-center justify-center p-6">
+        <article class="bg-[#1c1c1c] border border-gray-800 p-6 rounded-xl w-80 ">
+
+            <h1 class="text-2xl font-bold text-center text-yellow-200 mb-1">SelectWeather</h1>
+            <p class="text-gray-400 text-sm text-center mb-6">Consulta el pronóstico del tiempo de cualquier ciudad del
+                mundo al instante.</p>
 
             <section class="flex gap-2">
                 <input id="city-input" type="text" placeholder="Ciudad"
-                    class="border border-gray-300 p-2 rounded w-full focus:outline-blue-500">
-                <button id="search-btn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                    class="bg-[#333] border border-gray-800 p-2 rounded w-full">
+                <button id="search-btn"
+                    class="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition">
                     Ver
                 </button>
             </section>
@@ -27,9 +37,9 @@
             <section id="weather-info" class="mt-6 text-center border-t pt-4">
 
                 <p id="p-error" class="hidden"></p>
-                <h2 id="city-name" class="text-xl font-bold text-gray-800">--</h2>
+                <h2 id="city-name" class="text-xl font-bold text-yellow-200">--</h2>
 
-                <div class="text-5xl font-bold text-gray-800 my-2">
+                <div class="text-5xl font-bold text-yellow-200 my-2">
                     <span id="temp-val">--</span>°C
                 </div>
 
@@ -38,8 +48,10 @@
         </article>
     </main>
 
-    <footer></footer>
-    
+    <footer class="bg-[#1c1c1c] text-gray-400 py-4 text-center text-xs border-t border-gray-800">
+        <p>Desarrollado por <span class="font-bold">Jorge Luis</span> </p>
+    </footer>
+
     <script src="js/app.js"></script>
 </body>
 
